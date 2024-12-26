@@ -7,9 +7,10 @@ import Navbar from './components/Navbar'
 import LineChart from './components/LineChart';
 import Sidebar from './components/Sidebar';
 import React, { useRef, useEffect, useState } from 'react';
-
+import {getAllUsers} from './api/user';
 export default function Home() {
   const {isSignedIn} = useAuth()
+
   const randomData = () => {
     return Array.from({length: 8}, () => Math.floor(Math.random() * 100));
   }
